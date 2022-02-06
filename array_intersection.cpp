@@ -2,7 +2,7 @@
 //You have to find the intersection of these two arrays.
 // Intersection of two arrays is an array that consists of all the common elements occurring in both arrays.
 
-//only ans->
+//only function ans->
 
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
 {
