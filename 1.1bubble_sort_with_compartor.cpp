@@ -35,3 +35,7 @@ int main(){
     
     return 0;
 }
+
+
+//time complexity  in case of sorted -> O(n) Best Case
+//                 in case of unsorted ->O(n^2) worst case
