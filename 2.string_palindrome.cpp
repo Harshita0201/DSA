@@ -6,37 +6,38 @@
 //we get S = “c1odeedo1c”, which is a palindrome. Hence, the given string is also a palindrome.
 
 
-char toLower(char s){
-    //char temp;
-    if(s>='a' && s<='z'){ //lower case
-        return s;
-    }else{ //upper case
-        char temp=s-'A'+'a'; //upper to lower 
-        return temp;
-    }
-    
+bool ValidChar(char ch){
+    if((ch<='Z' && ch>='A') ||(ch<='z' && ch>='a')||(ch>='0' && ch<='9'))
+        return true;
+    return false;
 }
+
+char tolowercase(char ch){
+    if(ch >='A' && ch<='Z'){
+        return ch-'A'+'a';
+    }
+    return ch;
+}
+
 bool checkPalindrome(string s)
 {
     // Write your code here.
-    int str=0;
-    int e=s.size()-1;
+    int i = 0;
+    int j = s.length()-1;
     
-    while(str<e){
-         while(!(s[str]>='a' && s[str]<='z' || s[str]>='A' && s[str]<='Z' || s[str]>='0' && s[str]<='9')){
-            str++;
+    while(i<j){
+        if(!ValidChar(s[i])){
+            i++;
+            continue;
         }
-        while(!(s[e]>='a' && s[e]<='z' || s[e]>='A' && s[e]<='Z' || s[e]>='0' && s[e]<='9')){
-            e--;
+        if(!ValidChar(s[j])){
+            j--;
+            continue;
         }
-        if(toLower(s[str])!=toLower(s[e])){
-           
-            return 0;
-        }
-        else{
-            str++;
-            e--;
-        }
+        if(tolowercase(s[i]) != tolowercase(s[j])) return false;
+        i++;
+        j--;
     }
-    return 1;
+    return true;
+    
 }
