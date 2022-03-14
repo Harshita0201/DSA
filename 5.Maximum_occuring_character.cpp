@@ -69,3 +69,7 @@ int main()
         cout<< obj.getMaxOccuringChar(str)<<endl;
     }
 }  // } Driver Code Ends
+
+
+//TC: O(n)
+//SC: 26 array size there O(1) or constant space complexity.  
