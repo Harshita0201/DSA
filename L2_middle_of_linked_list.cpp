@@ -43,3 +43,28 @@ public:
         
     }
 };
+
+//aproach 2: optimised o(n/2) solution
+//  ListNode* middleNode(ListNode* head) {
+//         //if 1 node
+//         if(head==NULL || head->next==NULL){
+//             return head;
+//         }
+//         // if 2 nodes
+//         if(head->next->next==NULL){
+//             return head->next; //second node
+//         }
+        
+//         ListNode *slow= head;
+//         ListNode *fast=head->next;
+//         while(fast!=NULL){
+//             fast=fast->next;//1 hop for fast
+//             if(fast!=NULL){
+//                 fast=fast->next; //2 hop for fast
+//             }
+//             slow=slow->next; //1 hop for slow
+            
+//         }
+//         return slow;
+        
+//     }
