@@ -1,0 +1,24 @@
+ bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(p==NULL && q==NULL){
+            return true;
+        }
+        if(p==NULL && q!=NULL){
+            return false;
+        }
+        if(p!=NULL && q==NULL){
+            return false;
+        }
+        
+        //recursive checks in left and right subtrees of both the given trees
+        bool left=isSameTree(p->left, q->left);
+        bool right=isSameTree(p->right, q->right);
+        
+        bool value=p->val==q->val; //check node values of both the tress
+        
+        if(left && right && value){
+            return true;
+        }else{
+            return false;
+        }
+    
+    }
