@@ -100,7 +100,9 @@ long long int houseRobber(vector<int>& valueInHouse)
     //tabulation method WRONG
     //return max(solve3(first), solve3(second));
     
-    //space optimization
+    //space optimization //tc: o(n) sc:o(n)---
     return max(solve4(first), solve4(second));
     
 }
+
+
