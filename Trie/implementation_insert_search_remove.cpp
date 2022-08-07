@@ -113,11 +113,11 @@ class Trie{
         }
         
         //recursive calls for further index 
-          return removeUtil(child, word.substr(1));
+        removeUtil(child, word.substr(1));
     }
     
     void remove_word(string word){
-        return removeUtil(root, word);
+          removeUtil(root, word);
     }
     
     
@@ -132,8 +132,10 @@ int main(){
     cout << "After removal" << endl;
     cout << "is present or not?" << t.search("ABCD") << endl;
     //cout << "is Trie empty?" << t.isEmpty() << endl;
+    t.remove_word("NUDE");
     return 0;
 }
+
 
 //tc of every solution : o(l) l is lenght of word
 //sc The space complexity of creating a trie is O(alphabet_size * average key length * N) where N is th number of words in the trie.
