@@ -115,7 +115,7 @@ class Solution
     //           }
     //           int exclude= 0 + nextRow[prev+1];
                
-    //           currRow[next+1]=max(include, exclude);
+    //           currRow[prev+1]=max(include, exclude);
     //       }
     //       //mpve ahead
     //       nextRow=currRow;
