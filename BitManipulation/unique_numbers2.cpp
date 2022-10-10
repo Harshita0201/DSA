@@ -1,5 +1,6 @@
 //coding blocks
-//present only once. Find the unique numbers in linear time without using any extra space. ( Hint - Use Bitwise )
+//We are given an array containg n numbers. All the numbers are present twice except for two numbers which are present only once. 
+//Find the unique numbers in linear time without using any extra space. ( Hint - Use Bitwise )
 
 // Input Format
 // First line contains the number n. Second line contains n space separated number.
