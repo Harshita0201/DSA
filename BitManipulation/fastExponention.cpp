@@ -13,7 +13,7 @@ int fastExponention(int a, int n){
         if(lastBit){
             ans=ans*a;
         }
-        a=a*a;
+        a=a*a; //square up the value of a
         n=n>>1;//discard last bit
     }
     return ans;
