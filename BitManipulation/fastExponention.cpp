@@ -10,7 +10,7 @@ int fastExponention(int a, int n){
     int ans=1;
     while(n){
         int lastBit = n&1;
-        if(lastBit){
+        if(lastBit){ //if last bit is 1 or a set bit
             ans=ans*a;
         }
         a=a*a; //square up the value of a
